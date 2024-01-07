@@ -20,18 +20,17 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.current_user_id = None  # initializam user-ul curent cand se porneste aplicatia
-
-        self.ui.pushButton_5.clicked.connect(self.Autentificare)
-        self.ui.pushButton_6.clicked.connect(self.new_user)
-        self.ui.pushButton_9.clicked.connect(self.Inregistrare)
-        self.ui.pushButton_10.clicked.connect(self.returnToLoginPage)
-        self.ui.pushButton_3.clicked.connect(self.LogOut)
-        self.ui.pushButton_4.clicked.connect(self.myReservationsButtonClicked)
-        self.ui.pushButton_8.clicked.connect(self.returnToTablePage)
+        
         self.ui.pushButton.clicked.connect(self.reservationButtonClicked)
         self.ui.pushButton_2.clicked.connect(self.checkingButtonClicked)
+        self.ui.pushButton_3.clicked.connect(self.LogOut)
+        self.ui.pushButton_4.clicked.connect(self.myReservationsButtonClicked)
+        self.ui.pushButton_5.clicked.connect(self.Autentificare)
+        self.ui.pushButton_6.clicked.connect(self.new_user)
         self.ui.pushButton_7.clicked.connect(self.undoReservation)
-
+        self.ui.pushButton_8.clicked.connect(self.returnToTablePage)
+        self.ui.pushButton_9.clicked.connect(self.Inregistrare)
+        self.ui.pushButton_10.clicked.connect(self.returnToLoginPage)
 
     def Autentificare(self):
         connection = sqlite3.connect("cruise.db")
